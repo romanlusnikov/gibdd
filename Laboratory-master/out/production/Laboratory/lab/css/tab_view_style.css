@@ -1,0 +1,12 @@
+.tab-pane>*.tab-header-area>*.tab-header-background
+{
+    -fx-background-color: -fx-outer-border, -fx-text-box-border, #b5d5ca;
+}
+
+.tab:selected {
+    -fx-background-color: #e0a9af;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: #e0a9af;
+}

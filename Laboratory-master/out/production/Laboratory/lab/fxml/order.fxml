@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab.controller.OrderController">
+   <children>
+       <TableView fx:id="driversTable" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="780.0" stylesheets="@../css/table_view_style.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+           <columns>
+               <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+               <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+               <TableColumn fx:id="middlenameColumn" prefWidth="75.0" text="Middlename" />
+               <TableColumn fx:id="passportSerialColumn" prefWidth="75.0" text="Passport serial" />
+               <TableColumn fx:id="passportNumberColumn" prefWidth="75.0" text="Passport number" />
+               <TableColumn fx:id="postcodeColumn" prefWidth="75.0" text="Postcode" />
+               <TableColumn fx:id="addressColumn" prefWidth="75.0" text="Address" />
+               <TableColumn fx:id="addressLifeColumn" prefWidth="75.0" text="Address life" />
+               <TableColumn fx:id="companyColumn" prefWidth="75.0" text="Company" />
+               <TableColumn fx:id="jobnameColumn" prefWidth="75.0" text="Jobname" />
+               <TableColumn fx:id="phoneColumn" prefWidth="75.0" text="Phone" />
+               <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+               <TableColumn fx:id="photoColumn" prefWidth="75.0" text="Photo" />
+               <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
+           </columns>
+       </TableView>
+      <Button layoutX="160.0" layoutY="360.0" mnemonicParsing="false" onAction="#editDriver" prefWidth="135.0" text="Изменить водителя" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="170.0">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="305.0" layoutY="360.0" mnemonicParsing="false" onAction="#deleteDriver" prefWidth="125.0" text="Удалить водителя" textAlignment="CENTER" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="deleteID" layoutX="494.0" layoutY="360.0" promptText="Введите ID для удаления" style="-fx-border-color: #e0a9af;" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="160.0">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </TextField>
+      <Button layoutX="170.0" layoutY="370.0" mnemonicParsing="false" onAction="#addDriver" prefWidth="135.0" text="Добавить водителя" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="isDeleteLabel" layoutX="517.0" layoutY="332.0" text="Вы хотите удалить выбранного пациента?" textFill="#49aa51" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
